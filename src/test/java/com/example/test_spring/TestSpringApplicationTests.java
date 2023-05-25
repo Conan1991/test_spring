@@ -17,18 +17,25 @@ class TestSpringApplicationTests {
     void contextLoads() {
         getAndPrint(1);
         getAndPrint(2);
+        getAllNotes();
+        getAllEmails();
         getAndPrint(1);
         getAndPrint(2);
+        getAllNotes();
         getAndPrint(3);
-
-        getAll();
-        getAll();
+        getAllEmails();
+        getAllNotes();
+        getAllEmails();
     }
     private void getAndPrint(Integer id) {
         log.info("user found: {}", user.getByEmail(id));
     }
 
-    private void getAll(){
-        log.info("all found: {}", user.getAllEmails());
+    private void getAllEmails(){
+        log.info("all emails found: {}", user.getAllEmails());
+    }
+
+    private void getAllNotes(){
+        log.info("all emails found: {}", user.getAllNotes());
     }
 }

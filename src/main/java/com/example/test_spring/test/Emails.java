@@ -21,8 +21,4 @@ public class Emails {
     public List<String> getEmails() {
         return emails;
     }
-
-    public void setEmails(List<String> emails) {
-        this.emails = emails;
-    }
 }
