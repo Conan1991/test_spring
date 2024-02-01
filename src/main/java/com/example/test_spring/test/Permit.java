@@ -1,17 +1,14 @@
 package com.example.test_spring.test;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.Instant;
 
+@Getter
+@Setter
 public class Permit {
     private Integer reserveId;
-
-    public Instant getBeginPlanTime() {
-        return beginPlanTime;
-    }
-
-    public void setBeginPlanTime(Instant beginPlanTime) {
-        this.beginPlanTime = beginPlanTime;
-    }
 
     private Instant beginPlanTime;
 
@@ -20,15 +17,15 @@ public class Permit {
         this.beginPlanTime = beginPlanTime;
     }
 
+    @Override
+    public String toString() {
+        return "Permit{" +
+               "reserveId=" + reserveId +
+               ", beginPlanTime=" + beginPlanTime +
+               '}';
+    }
+
     public Permit(Integer reserveId) {
-        this.reserveId = reserveId;
-    }
-
-    public Integer getReserveId() {
-        return reserveId;
-    }
-
-    public void setReserveId(Integer reserveId) {
         this.reserveId = reserveId;
     }
 }
