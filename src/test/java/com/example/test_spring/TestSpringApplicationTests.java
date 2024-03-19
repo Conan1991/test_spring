@@ -197,11 +197,10 @@ class TestSpringApplicationTests {
 
     @Test
     void contextLoads9() {
-//        LocalDate today = LocalDate.now();
-//
-//        Stream<LocalDate> next3Days = today.datesUntil();
-//
-//        next3Days.forEach(System.out::println);
+        List<Permit> permits = getPermits();
+
+        log.info("bool {}",  permits.stream()
+                .count() > 4);
     }
 
     @Test
@@ -246,6 +245,7 @@ class TestSpringApplicationTests {
         Integer b = 15656;
 
         log.info(String.valueOf(i));
+        log.info("bool {}", a >= 80);
 
 
     }
